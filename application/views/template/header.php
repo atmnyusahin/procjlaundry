@@ -203,7 +203,7 @@
                     </li>
                     <li> <a href="javascript:void(0);" class="waves-effect"><i class="linea-icon linea-basic fa-fw " data-icon="7"></i> <span class="hide-menu "> Transaksi </a>
                     </li>
-                    <li><a href="<?php echo base_url()?>assets/inbox.html" class="waves-effect"><i data-icon=")" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Paket</span></a>
+                    <li><a href="<?php echo base_url()?>Paket" class="waves-effect"><i data-icon=")" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Paket</span></a>
                     </li>
                     <li> <a href="#" class="waves-effect"><i data-icon="<" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Pelanggan</a>
                     </li>
