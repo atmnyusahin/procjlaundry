@@ -201,87 +201,13 @@
                             <li> <a href="<?php echo base_url()?>assets/index4.html">Menu 4</a> </li>
                         </ul>
                     </li>
-                    <li> <a href="javascript:void(0);" class="waves-effect"><i class="linea-icon linea-basic fa-fw " data-icon="7"></i> <span class="hide-menu "> Transaksi<span class="fa arrow"></span> </a>
-                        <ul class="nav nav-second-level">
-                            <li> <a href="<?php echo base_url()?>#">Transaksi 1</a> </li>
-                            <li> <a href="<?php echo base_url()?>#">Transaksi 2</a> </li>
-                            <li> <a href="<?php echo base_url()?>#">Transaksi 3</a> </li>
-                            
-                        </ul>
+                    <li> <a href="javascript:void(0);" class="waves-effect"><i class="linea-icon linea-basic fa-fw " data-icon="7"></i> <span class="hide-menu "> Transaksi </a>
                     </li>
-                    <li><a href="<?php echo base_url()?>assets/inbox.html" class="waves-effect"><i data-icon=")" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Paket <span class="fa arrow"></span></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="<?php echo base_url()?>assets/chat.html">Chat-message</a></li>
-                            <li><a href="javascript:void(0)" class="waves-effect">Inbox<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li> <a href="<?php echo base_url()?>assets/inbox.html">Mail box</a></li>
-                                    <li> <a href="<?php echo base_url()?>assets/inbox-detail.html">Inbox detail</a></li>
-                                    <li> <a href="<?php echo base_url()?>assets/compose.html">Compose mail</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="javascript:void(0)" class="waves-effect">Contacts<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li> <a href="<?php echo base_url()?>assets/contact.html">Contact1</a></li>
-                                    <li> <a href="<?php echo base_url()?>assets/contact2.html">Contact2</a></li>
-                                    <li> <a href="<?php echo base_url()?>assets/contact-detail.html">Contact Detail</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <li><a href="<?php echo base_url()?>assets/inbox.html" class="waves-effect"><i data-icon=")" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Paket</span></a>
                     </li>
-                    <li> <a href="<?php echo base_url()?>assets/#" class="waves-effect"><i data-icon="<" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Pelanggan<span class="fa arrow"></span> </span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="<?php echo base_url()?>assets/cards.html">Cards</a></li>
-                            <li><a href="<?php echo base_url()?>assets/panels-wells.html">Panels and Wells</a></li>
-                            <li><a href="<?php echo base_url()?>assets/panel-ui-block.html">Panels With BlockUI</a></li>
-                            <li><a href="<?php echo base_url()?>assets/panel-draggable.html">Draggable Panel</a></li>
-                            <li><a href="<?php echo base_url()?>assets/portlet-draggable.html">Draggable Portlet</a></li>
-                            <li><a href="<?php echo base_url()?>assets/buttons.html">Buttons</a></li>
-                            <li><a href="<?php echo base_url()?>assets/bootstrap-switch.html">Bootstrap Switch</a></li>
-                            <li><a href="<?php echo base_url()?>assets/date-paginator.html">Date Paginator</a></li>
-                            <li><a href="<?php echo base_url()?>assets/sweatalert.html">Sweat alert</a></li>
-                            <li><a href="<?php echo base_url()?>assets/typography.html">Typography</a></li>
-                            <li><a href="<?php echo base_url()?>assets/grid.html">Grid</a></li>
-                            <li><a href="<?php echo base_url()?>assets/tabs.html">Tabs</a></li>
-                            <li><a href="<?php echo base_url()?>assets/tab-stylish.html">Stylish Tabs</a></li>
-                            <li><a href="<?php echo base_url()?>assets/modals.html">Modals</a></li>
-                            <li><a href="<?php echo base_url()?>assets/progressbars.html">Progress Bars</a></li>
-                            <li><a href="<?php echo base_url()?>assets/notification.html">Notifications</a></li>
-                            <li><a href="<?php echo base_url()?>assets/carousel.html">Carousel</a></li>
-                            <li><a href="<?php echo base_url()?>assets/list-style.html">List & Media object</a></li>
-                            <li><a href="<?php echo base_url()?>assets/user-cards.html">User Cards</a></li>
-                            <li><a href="<?php echo base_url()?>assets/timeline.html">Timeline</a></li>
-                            <li><a href="<?php echo base_url()?>assets/timeline-horizontal.html">Horizontal Timeline</a></li>
-                            <li><a href="<?php echo base_url()?>assets/nestable.html">Nesteble</a></li>
-                            <li><a href="<?php echo base_url()?>assets/range-slider.html">Range Slider</a></li>
-                            <li><a href="<?php echo base_url()?>assets/ribbons.html">Ribbons</a></li>
-                            <li><a href="<?php echo base_url()?>assets/steps.html">Steps</a></li>
-                            <li><a href="<?php echo base_url()?>assets/session-idle-timeout.html">Session Idle Timeout</a></li>
-                            <li><a href="<?php echo base_url()?>assets/session-timeout.html">Session Timeout</a></li>
-                            <li><a href="<?php echo base_url()?>assets/bootstrap.html">Bootstrap UI</a></li>
-                            <li><a href="<?php echo base_url()?>assets/tooltip-stylish.html">Stylish Tooltips</a></li>
-                        </ul>
+                    <li> <a href="#" class="waves-effect"><i data-icon="<" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Pelanggan</a>
                     </li>
-                    <li> <a href="<?php echo base_url()?>assets/forms.html" class="waves-effect"><i data-icon="&#xe00b;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Harga<span class="fa arrow"></span></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="<?php echo base_url()?>assets/form-basic.html">Basic Forms</a></li>
-                            <li><a href="<?php echo base_url()?>assets/form-layout.html">Form Layout</a></li>
-                            <li><a href="<?php echo base_url()?>assets/form-advanced.html">Form Addons</a></li>
-                            <li><a href="<?php echo base_url()?>assets/form-material-elements.html">Form Material</a></li>
-                            <li><a href="<?php echo base_url()?>assets/form-float-input.html">Form Float Input</a></li>
-                            <li><a href="<?php echo base_url()?>assets/form-upload.html">File Upload</a></li>
-                            <li><a href="<?php echo base_url()?>assets/form-mask.html">Form Mask</a></li>
-                            <li><a href="<?php echo base_url()?>assets/form-img-cropper.html">Image Cropping</a></li>
-                            <li><a href="<?php echo base_url()?>assets/form-validation.html">Form Validation</a></li>
-                            <li><a href="<?php echo base_url()?>assets/form-dropzone.html">File Dropzone</a></li>
-                            <li><a href="<?php echo base_url()?>assets/form-pickers.html">Form-pickers</a></li>
-                            <li><a href="<?php echo base_url()?>assets/icheck-control.html">Icheck Form Controls</a></li>
-                            <li><a href="<?php echo base_url()?>assets/form-wizard.html">Form-wizards</a></li>
-                            <li><a href="<?php echo base_url()?>assets/form-typehead.html">Typehead</a></li>
-                            <li><a href="<?php echo base_url()?>assets/form-xeditable.html">X-editable</a></li>
-                            <li><a href="<?php echo base_url()?>assets/form-summernote.html">Summernote</a></li>
-                            <li><a href="<?php echo base_url()?>assets/form-bootstrap-wysihtml5.html">Bootstrap wysihtml5</a></li>
-                            <li><a href="<?php echo base_url()?>assets/form-tinymce-wysihtml5.html">Tinymce wysihtml5</a></li>
-                        </ul>
+                    <li> <a href="<?php echo base_url()?>assets/forms.html" class="waves-effect"><i data-icon="&#xe00b;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Satuan Harga</a>
                     </li>
                     <li class="nav-small-cap">--- Options</li>
                     
