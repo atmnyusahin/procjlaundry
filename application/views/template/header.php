@@ -42,10 +42,10 @@
     <div id="wrapper">
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top m-b-0">
-            <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="<?php echo base_url()?>assets/javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
+            <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
                 <div class="top-left-part"><a class="logo" href="<?php echo base_url()?>assets/index.html"><b><!--This is dark logo icon--><img src="<?php echo base_url();?>/assets/plugins/images/eliteadmin-logo.png" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="<?php echo base_url();?>/assets/plugins/images/eliteadmin-logo-dark.png" alt="home" class="light-logo" /></b><span class="hidden-xs"><!--This is dark logo text--><img src="<?php echo base_url();?>/assets/plugins/images/eliteadmin-text.png" alt="home" class="dark-logo" /><!--This is light logo text--><img src="<?php echo base_url();?>/assets/plugins/images/eliteadmin-text-dark.png" alt="home" class="light-logo" /></span></a></div>
                 <ul class="nav navbar-top-links navbar-left hidden-xs">
-                    <li><a href="<?php echo base_url()?>assets/javascript:void(0)" class="open-close hidden-xs waves-effect waves-light"><i class="icon-arrow-left-circle ti-menu"></i></a></li>
+                    <li><a href="javascript:void(0)" class="open-close hidden-xs waves-effect waves-light"><i class="icon-arrow-left-circle ti-menu"></i></a></li>
                     <li>
                         <form role="search" class="app-search hidden-xs">
                             <input type="text" placeholder="Search..." class="form-control"> <a href="<?php echo base_url()?>assets/"><i class="fa fa-search"></i></a> </form>
@@ -84,7 +84,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a class="text-center" href="<?php echo base_url()?>assets/javascript:void(0);"> <strong>See all notifications</strong> <i class="fa fa-angle-right"></i> </a>
+                                <a class="text-center" href="javascript:void(0);"> <strong>See all notifications</strong> <i class="fa fa-angle-right"></i> </a>
                             </li>
                         </ul>
                         <!-- /.dropdown-messages -->
@@ -158,7 +158,7 @@
                         </ul>
                     </li>
                     <!-- /.Megamenu -->
-                    <li class="right-side-toggle"> <a class="waves-effect waves-light" href="<?php echo base_url()?>assets/javascript:void(0)"><i class="ti-settings"></i></a></li>
+                    <li class="right-side-toggle"> <a class="waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>
                     <!-- /.dropdown -->
                 </ul>
             </div>
@@ -195,47 +195,31 @@
                     <li class="nav-small-cap m-t-10">--- Main Menu</li>
                     <li> <a href="<?php echo base_url()?>assets/index.html" class="waves-effect active"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Dashboard <span class="fa arrow"></span> <span class="label label-rouded label-custom pull-right">4</span></span></a>
                         <ul class="nav nav-second-level">
-                            <li> <a href="<?php echo base_url()?>assets/index.html">Minimalistic</a> </li>
-                            <li> <a href="<?php echo base_url()?>assets/index2.html">Demographical</a> </li>
-                            <li> <a href="<?php echo base_url()?>assets/index3.html">Analitical</a> </li>
-                            <li> <a href="<?php echo base_url()?>assets/index4.html">Simpler</a> </li>
+                            <li> <a href="<?php echo base_url()?>assets/index.html">Menu 1</a> </li>
+                            <li> <a href="<?php echo base_url()?>assets/index2.html">Menu 2</a> </li>
+                            <li> <a href="<?php echo base_url()?>assets/index3.html">Menu 3</a> </li>
+                            <li> <a href="<?php echo base_url()?>assets/index4.html">Menu 4</a> </li>
                         </ul>
                     </li>
-                    <li> <a href="<?php echo base_url()?>assets/javascript:void(0);" class="waves-effect"><i class="linea-icon linea-basic fa-fw text-danger" data-icon="7"></i> <span class="hide-menu text-danger"> Multipurpose <span class="fa arrow"></span> <span class="label label-rouded label-danger pull-right">HOT</span></span></a>
+                    <li> <a href="javascript:void(0);" class="waves-effect"><i class="linea-icon linea-basic fa-fw " data-icon="7"></i> <span class="hide-menu "> Transaksi<span class="fa arrow"></span> </a>
                         <ul class="nav nav-second-level">
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-hospital/index.html">Hospital Admin</a> </li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-crm/index.html">CRM Admin</a> </li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-university/index.html">University Admin</a> </li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-music/index.html">Music Admin</a> </li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-real-estate/index.html">Real Estate Admin</a> </li>
-                            <li role="separator" class="divider"></li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-inverse/index.html">Inverse</a></li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-colors/index.html">Colors</a></li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin/index.html">Eliteadmin</a></li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-wpmenu/index.html">Wpmenu</a></li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-ecommerce/index.html">Ecommerce</a></li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-modern/index.html">Modern</a></li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-inverse-php/index.php">Basic PHP</a></li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-material/index3.html">Material Design</a></li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-mini-sidebar/index3.html">Mini Sidebar</a></li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-horizontal-navbar/index3.html">Horizontal Boxed Nav</a></li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-horizontal-nav-fullwidth/index.html">Horizontal Full Nav</a></li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-iconbar/index4.html">Iconbar</a></li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-rtl/index.html">Eliteadmin RTL</a></li>
-                            <li> <a href="<?php echo base_url()?>assets/eliteadmin-inverse-rtl/index.html">Inverse RTL</a></li>
+                            <li> <a href="<?php echo base_url()?>#">Transaksi 1</a> </li>
+                            <li> <a href="<?php echo base_url()?>#">Transaksi 2</a> </li>
+                            <li> <a href="<?php echo base_url()?>#">Transaksi 3</a> </li>
+                            
                         </ul>
                     </li>
-                    <li><a href="<?php echo base_url()?>assets/inbox.html" class="waves-effect"><i data-icon=")" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Apps <span class="fa arrow"></span></span></a>
+                    <li><a href="<?php echo base_url()?>assets/inbox.html" class="waves-effect"><i data-icon=")" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Paket <span class="fa arrow"></span></span></a>
                         <ul class="nav nav-second-level">
                             <li><a href="<?php echo base_url()?>assets/chat.html">Chat-message</a></li>
-                            <li><a href="<?php echo base_url()?>assets/javascript:void(0)" class="waves-effect">Inbox<span class="fa arrow"></span></a>
+                            <li><a href="javascript:void(0)" class="waves-effect">Inbox<span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li> <a href="<?php echo base_url()?>assets/inbox.html">Mail box</a></li>
                                     <li> <a href="<?php echo base_url()?>assets/inbox-detail.html">Inbox detail</a></li>
                                     <li> <a href="<?php echo base_url()?>assets/compose.html">Compose mail</a></li>
                                 </ul>
                             </li>
-                            <li><a href="<?php echo base_url()?>assets/javascript:void(0)" class="waves-effect">Contacts<span class="fa arrow"></span></a>
+                            <li><a href="javascript:void(0)" class="waves-effect">Contacts<span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li> <a href="<?php echo base_url()?>assets/contact.html">Contact1</a></li>
                                     <li> <a href="<?php echo base_url()?>assets/contact2.html">Contact2</a></li>
@@ -244,7 +228,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li> <a href="<?php echo base_url()?>assets/#" class="waves-effect"><i data-icon="/" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">UI Elements<span class="fa arrow"></span> <span class="label label-rouded label-info pull-right">13</span> </span></a>
+                    <li> <a href="<?php echo base_url()?>assets/#" class="waves-effect"><i data-icon="<" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Pelanggan<span class="fa arrow"></span> </span></a>
                         <ul class="nav nav-second-level">
                             <li><a href="<?php echo base_url()?>assets/cards.html">Cards</a></li>
                             <li><a href="<?php echo base_url()?>assets/panels-wells.html">Panels and Wells</a></li>
@@ -277,7 +261,7 @@
                             <li><a href="<?php echo base_url()?>assets/tooltip-stylish.html">Stylish Tooltips</a></li>
                         </ul>
                     </li>
-                    <li> <a href="<?php echo base_url()?>assets/forms.html" class="waves-effect"><i data-icon="&#xe00b;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Forms<span class="fa arrow"></span></span></a>
+                    <li> <a href="<?php echo base_url()?>assets/forms.html" class="waves-effect"><i data-icon="&#xe00b;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Harga<span class="fa arrow"></span></span></a>
                         <ul class="nav nav-second-level">
                             <li><a href="<?php echo base_url()?>assets/form-basic.html">Basic Forms</a></li>
                             <li><a href="<?php echo base_url()?>assets/form-layout.html">Form Layout</a></li>
@@ -299,95 +283,8 @@
                             <li><a href="<?php echo base_url()?>assets/form-tinymce-wysihtml5.html">Tinymce wysihtml5</a></li>
                         </ul>
                     </li>
-                    <li class="nav-small-cap">--- Proffessional</li>
-                    <li> <a href="<?php echo base_url()?>assets/#" class="waves-effect"><i data-icon="&#xe008;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Sample Pages<span class="fa arrow"></span><span class="label label-rouded label-purple pull-right">30</span></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="<?php echo base_url()?>assets/starter-page.html">Starter Page</a></li>
-                            <li><a href="<?php echo base_url()?>assets/blank.html">Blank Page</a></li>
-                            <li><a href="<?php echo base_url()?>assets/javascript:void(0)" class="waves-effect">Email Templates<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li> <a href="<?php echo base_url()?>assets/email-templates/basic.html">Basic</a></li>
-                                    <li> <a href="<?php echo base_url()?>assets/email-templates/alert.html">Alert</a></li>
-                                    <li> <a href="<?php echo base_url()?>assets/email-templates/billing.html">Billing</a></li>
-                                    <li> <a href="<?php echo base_url()?>assets/email-templates/password-reset.html">Reset Pwd</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="<?php echo base_url()?>assets/lightbox.html">Lightbox Popup</a></li>
-                            <li><a href="<?php echo base_url()?>assets/treeview.html">Treeview</a></li>
-                            <li><a href="<?php echo base_url()?>assets/search-result.html">Search Result</a></li>
-                            <li><a href="<?php echo base_url()?>assets/utility-classes.html">Utility Classes</a></li>
-                            <li><a href="<?php echo base_url()?>assets/custom-scroll.html">Custom Scrolls</a></li>
-                            <li><a href="<?php echo base_url()?>assets/login.html">Login Page</a></li>
-                            <li><a href="<?php echo base_url()?>assets/login2.html">Login v2</a></li>
-                            <li><a href="<?php echo base_url()?>assets/animation.html">Animations</a></li>
-                            <li><a href="<?php echo base_url()?>assets/profile.html">Profile</a></li>
-                            <li><a href="<?php echo base_url()?>assets/invoice.html">Invoice</a></li>
-                            <li><a href="<?php echo base_url()?>assets/faq.html">FAQ</a></li>
-                            <li><a href="<?php echo base_url()?>assets/gallery.html">Gallery</a></li>
-                            <li><a href="<?php echo base_url()?>assets/pricing.html">Pricing</a></li>
-                            <li><a href="<?php echo base_url()?>assets/register.html">Register</a></li>
-                            <li><a href="<?php echo base_url()?>assets/register2.html">Register v2</a></li>
-                            <li><a href="<?php echo base_url()?>assets/register3.html">3 Step Registration</a></li>
-                            <li><a href="<?php echo base_url()?>assets/recoverpw.html">Recover Password</a></li>
-                            <li><a href="<?php echo base_url()?>assets/lock-screen.html">Lock Screen</a></li>
-                            <li><a href="<?php echo base_url()?>assets/400.html">Error 400</a></li>
-                            <li><a href="<?php echo base_url()?>assets/403.html">Error 403</a></li>
-                            <li><a href="<?php echo base_url()?>assets/404.html">Error 404</a></li>
-                            <li><a href="<?php echo base_url()?>assets/500.html">Error 500</a></li>
-                            <li><a href="<?php echo base_url()?>assets/503.html">Error 503</a></li>
-                        </ul>
-                    </li>
-                    <li> <a href="<?php echo base_url()?>assets/#" class="waves-effect"><i data-icon="&#xe006;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Charts<span class="fa arrow"></span></span></a>
-                        <ul class="nav nav-second-level">
-                            <li> <a href="<?php echo base_url()?>assets/flot.html">Flot Charts</a> </li>
-                            <li><a href="<?php echo base_url()?>assets/morris-chart.html">Morris Chart</a></li>
-                            <li><a href="<?php echo base_url()?>assets/chart-js.html">Chart-js</a></li>
-                            <li><a href="<?php echo base_url()?>assets/peity-chart.html">Peity Charts</a></li>
-                            <li><a href="<?php echo base_url()?>assets/knob-chart.html">Knob Charts</a></li>
-                            <li><a href="<?php echo base_url()?>assets/sparkline-chart.html">Sparkline charts</a></li>
-                            <li><a href="<?php echo base_url()?>assets/extra-charts.html">Extra Charts</a></li>
-                        </ul>
-                    </li>
-                    <li> <a href="<?php echo base_url()?>assets/tables.html" class="waves-effect"><i data-icon="O" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Tables<span class="fa arrow"></span><span class="label label-rouded label-danger pull-right">7</span></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="<?php echo base_url()?>assets/basic-table.html">Basic Tables</a></li>
-                            <li><a href="<?php echo base_url()?>assets/table-layouts.html">Table Layouts</a></li>
-                            <li><a href="<?php echo base_url()?>assets/data-table.html">Data Table</a></li>
-                            <li class="hidden"><a href="<?php echo base_url()?>assets/crud-table.html">Crud Table</a></li>
-                            <li><a href="<?php echo base_url()?>assets/bootstrap-tables.html">Bootstrap Tables</a></li>
-                            <li><a href="<?php echo base_url()?>assets/responsive-tables.html">Responsive Tables</a></li>
-                            <li><a href="<?php echo base_url()?>assets/editable-tables.html">Editable Tables</a></li>
-                            <li><a href="<?php echo base_url()?>assets/foo-tables.html">FooTables</a></li>
-                            <li><a href="<?php echo base_url()?>assets/jsgrid.html">JsGrid Tables</a></li>
-                        </ul>
-                    </li>
-                    <li> <a href="<?php echo base_url()?>assets/widgets.html" class="waves-effect"><i data-icon="P" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Widgets</span></a> </li>
-                    <li> <a href="<?php echo base_url()?>assets/#" class="waves-effect"><i data-icon="7" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Icons<span class="fa arrow"></span></span></a>
-                        <ul class="nav nav-second-level">
-                            <li> <a href="<?php echo base_url()?>assets/fontawesome.html">Font awesome</a> </li>
-                            <li> <a href="<?php echo base_url()?>assets/themifyicon.html">Themify Icons</a> </li>
-                            <li> <a href="<?php echo base_url()?>assets/simple-line.html">Simple line Icons</a> </li>
-                            <li><a href="<?php echo base_url()?>assets/linea-icon.html">Linea Icons</a></li>
-                            <li><a href="<?php echo base_url()?>assets/weather.html">Weather Icons</a></li>
-                        </ul>
-                    </li>
-                    <li> <a href="<?php echo base_url()?>assets/map-google.html" class="waves-effect"><i data-icon="Q" class="linea-icon linea-basic fa-fw"></i><span class="hide-menu" >Google Map</span></a> </li>
-                    <li> <a href="<?php echo base_url()?>assets/map-vector.html" class="waves-effect"><i data-icon="S" class="linea-icon linea-basic fa-fw"></i><span class="hide-menu" >Vector Map</span></a> </li>
-                    <li> <a href="<?php echo base_url()?>assets/calendar.html" class="waves-effect"><i data-icon="A" class="linea-icon linea-elaborate fa-fw"></i> <span class="hide-menu">Calendar</span></a></li>
-                    <li> <a href="<?php echo base_url()?>assets/javascript:void(0)" class="waves-effect"><i data-icon="F" class="linea-icon linea-software fa-fw"></i> <span class="hide-menu">Multi-Level Dropdown<span class="fa arrow"></span></span></a>
-                        <ul class="nav nav-second-level">
-                            <li> <a href="<?php echo base_url()?>assets/javascript:void(0)">Second Level Item</a> </li>
-                            <li> <a href="<?php echo base_url()?>assets/javascript:void(0)">Second Level Item</a> </li>
-                            <li> <a href="<?php echo base_url()?>assets/javascript:void(0)" class="waves-effect">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li> <a href="<?php echo base_url()?>assets/javascript:void(0)">Third Level Item</a> </li>
-                                    <li> <a href="<?php echo base_url()?>assets/javascript:void(0)">Third Level Item</a> </li>
-                                    <li> <a href="<?php echo base_url()?>assets/javascript:void(0)">Third Level Item</a> </li>
-                                    <li> <a href="<?php echo base_url()?>assets/javascript:void(0)">Third Level Item</a> </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                    <li class="nav-small-cap">--- Options</li>
+                    
                     <li><a href="<?php echo base_url()?>Login/logout" class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Log out</span></a></li>
                     <li class="nav-small-cap">--- Support</li>
                     <li><a href="<?php echo base_url()?>assets/documentation.html" class="waves-effect"><i class="fa fa-circle-o text-danger"></i> <span class="hide-menu">Documentation</span></a></li>
