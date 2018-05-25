@@ -201,13 +201,13 @@
                             <li> <a href="<?php echo base_url()?>assets/index4.html">Menu 4</a> </li>
                         </ul>
                     </li>
-                    <li> <a href="javascript:void(0);" class="waves-effect"><i class="linea-icon linea-basic fa-fw " data-icon="7"></i> <span class="hide-menu "> Transaksi </a>
+                    <li> <a href="<?php echo base_url()?>Transaksi" class="waves-effect"><i class="linea-icon linea-basic fa-fw " data-icon="7"></i> <span class="hide-menu "> Transaksi </a>
                     </li>
                     <li><a href="<?php echo base_url()?>Paket" class="waves-effect"><i data-icon=")" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Paket</span></a>
                     </li>
-                    <li> <a href="#" class="waves-effect"><i data-icon="<" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Pelanggan</a>
+                    <li> <a href="<?php echo base_url()?>Pelanggan" class="waves-effect"><i data-icon="<" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Pelanggan</a>
                     </li>
-                    <li> <a href="<?php echo base_url()?>assets/forms.html" class="waves-effect"><i data-icon="&#xe00b;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Satuan Harga</a>
+                    <li> <a href="<?php echo base_url()?>Manajemen_satuan_harga" class="waves-effect"><i data-icon="&#xe00b;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Satuan Harga</a>
                     </li>
                     <li class="nav-small-cap">--- Options</li>
                     
