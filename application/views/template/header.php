@@ -193,7 +193,7 @@
                         <!-- /input-group -->
                     </li>
                     <li class="nav-small-cap m-t-10">--- Main Menu</li>
-                    <li> <a href="<?php echo base_url()?>assets/index.html" class="waves-effect active"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Dashboard <span class="fa arrow"></span> <span class="label label-rouded label-custom pull-right">4</span></span></a>
+                    <li> <a href="<?php echo base_url()?>assets/index.html" class="waves-effect"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Dashboard <span class="fa arrow"></span> <span class="label label-rouded label-custom pull-right">4</span></span></a>
                         <ul class="nav nav-second-level">
                             <li> <a href="<?php echo base_url()?>assets/index.html">Menu 1</a> </li>
                             <li> <a href="<?php echo base_url()?>assets/index2.html">Menu 2</a> </li>
