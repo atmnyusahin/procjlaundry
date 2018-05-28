@@ -26,12 +26,12 @@ class Pelanggan extends US_Controller {
             $row[] = $no;
             $row[] = $key->nama;
             $row[] = $key->alamat;
+            $row[] = $key->no_telpon;
             $row[] = $key->email;
-            $row[] = $key->telp;
             
             $row[] = '
-            <a href="#" data-toggle="tooltip" data-original-title="Edit" onclick="show_edit('.$key->id.')"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
-            <a href="javascriptvoid:" data-toggle="tooltip" data-original-title="Hapus" onclick="hapus('.$key->id.')"> <i class="fa fa-close text-danger"></i> </a>
+            <a href="#" data-toggle="tooltip" data-original-title="Edit" onclick="show_edit('.$key->id_pelanggan.')"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+            <a href="javascriptvoid:" data-toggle="tooltip" data-original-title="Hapus" onclick="hapus('.$key->id_pelanggan.')"> <i class="fa fa-close text-danger"></i> </a>
 
             ';
             $data[] = $row;

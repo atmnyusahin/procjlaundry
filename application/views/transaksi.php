@@ -44,7 +44,7 @@
                             </center>
                             <hr>
                             <div class="table-responsive">
-                                <table id="table_non_resep" class="table table-bordered table-hover color-table info-table">
+                                <table id="id_transaksi" class="table table-bordered table-hover color-table info-table">
                                     <thead>
                                         <tr>
                                             <th>Nama</th>
