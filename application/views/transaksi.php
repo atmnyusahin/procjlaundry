@@ -39,24 +39,32 @@
                 
                                 <button class='btn btn-info'  data-toggle="modal" data-target="#modalNonResep" onclick=''><i class='fa fa-plus'></i> Tambah Transaksi</button>
                                 <!--<button class='btn btn-info'  data-toggle="modal" data-target="#modalDetail"><i class='fa fa-plus'></i> Tambah Pemesanan</button>-->
-                                <button class='btn btn-default' onclick='table_non_resep.ajax.reload();'><i class='fa fa-refresh'></i> Reload Table</button>
+                                <button class='btn btn-default' onclick='tb_transaksi.ajax.reload();'><i class='fa fa-refresh'></i> Reload Table</button>
 
                             </center>
                             <hr>
                             <div class="table-responsive">
-                                <table id="id_transaksi" class="table table-bordered table-hover color-table info-table">
+                                <table id="tb_transaksi" class="table table-bordered table-hover color-table info-table">
                                     <thead>
                                         <tr>
-                                            <th>Nama</th>
-                                            <th>Alamat</th>
-                                            <th>No. Telpon</th>
+                                            <th>Nama Pelanggan</th>
+                                            <th>Nama Satuan</th>
+                                            <th>Nama Paket</th>
+                                            <th>Tanggal Terima</th>
+                                            <th>Tanggal Selesai</th>
+                                            <th>Tanggal Keluar</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Nama</th>
-                                            <th>Alamat</th>
-                                            <th>No. Telpon</th>
+                                            <th>Nama Pelanggan</th>
+                                            <th>Nama Satuan</th>
+                                            <th>Nama Paket</th>
+                                            <th>Tanggal Terima</th>
+                                            <th>Tanggal Selesai</th>
+                                            <th>Tanggal Keluar</th>
+                                            <th>Action</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -89,3 +97,27 @@
 
     <script src="<?php echo base_url('assets'); ?>/js/cbpFWTabs.js"></script>
 <script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/bower_components/multiselect/js/jquery.multi-select.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		tb_transaksi = $('#tb_transaksi').DataTable({
+            "columnDefs": [{
+                
+            }],
+             "ajax": {
+                "url": "<?php echo base_url('Transaksi/ajaxTable');?>",
+                "type": "POST"
+            },
+            "serverSide": true, //Feature control DataTables' server-side processing mode.
+            "processing": true,
+
+            "scrollCollapse": true,
+            
+        });
+	});
+
+    $("#bt-transaksi").click(function(){
+        tb_transaksi.ajax.reload()
+        // alert("hai");
+    });
+</script>
