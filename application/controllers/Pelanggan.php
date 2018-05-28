@@ -23,7 +23,6 @@ class Pelanggan extends US_Controller {
         foreach ($list as $key) {
             $no++;
             $row = array();
-            $row[] = $no;
             $row[] = $key->nama;
             $row[] = $key->alamat;
             $row[] = $key->no_telpon;
