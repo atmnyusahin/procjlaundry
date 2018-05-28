@@ -3,7 +3,7 @@
 class M_pelanggan extends CI_Model {
 
 
-	var $table = 'Pelanggan';
+	var $table = 'pelanggan';
     var $column = array('nama','alamat','nomor_telepon'); 
     var $order = array('id_pelanggan' => 'desc');
 
