@@ -1,18 +1,20 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
     
-class M_paket extends CI_Model {
+class M_transaksi extends CI_Model {
 
 
-	var $table = 'paket';
-    var $column = array('id_satuan','nama','harga','jangka_waktu'); 
-    var $order = array('id_paket' => 'desc');
+	var $table = 'Transaksi';
+    var $column = array('id_pelanggan','id_satuan','id_paket','tgl_terima','tgl_selesai','tgl_keluar','nama_pelanggan'); 
+    var $order = array('id_transaksi' => 'desc');
 
     private function _get_datatables_query()
     {
-        
+        $this->db->select('transaksi.*, pelanggan.nama as nama_plggn, paket.nama as nama_paket, satuan.nama as nama_satuan');
         $this->db->from($this->table);
-        $this->db->where("is_delete", 0);
-
+        $this->db->join("pelanggan", "pelanggan.id_pelanggan = transaksi.id_pelanggan", "left");
+        $this->db->join("paket", "paket.id_paket = paket.id_paket", "left");
+        $this->db->join("satuan", "satuan.id_satuan = satuan.id_satuan", "left");
+        $this->db->where("transaksi.is_delete", 0);
         $i = 0;
     
         foreach ($this->column as $item) 
@@ -56,6 +58,7 @@ class M_paket extends CI_Model {
     public function count_filtered()
     {
         $this->_get_datatables_query();
+        $this->db->where('transaksi.is_delete', 0);
         $query = $this->db->get();
         
         return $query->num_rows();
@@ -63,7 +66,7 @@ class M_paket extends CI_Model {
     public function count_all()
     {
         $this->db->from($this->table);
-        $this->db->where('is_delete', 0);
+        $this->db->where('transaksi.is_delete', 0);
         return $this->db->count_all_results();
     }
 
