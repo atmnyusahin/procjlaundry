@@ -39,12 +39,12 @@
                 
                                 <button class='btn btn-info'  data-toggle="modal" data-target="#modalNonResep" onclick=''><i class='fa fa-plus'></i> Tambah Pelanggan</button>
                                 <!--<button class='btn btn-info'  data-toggle="modal" data-target="#modalDetail"><i class='fa fa-plus'></i> Tambah Pemesanan</button>-->
-                                <button class='btn btn-default' onclick='table_non_resep.ajax.reload();'><i class='fa fa-refresh'></i> Reload Table</button>
+                                <button class='btn btn-default' onclick='tb_pelanggan.ajax.reload();'><i class='fa fa-refresh'></i> Reload Table</button>
 
                             </center>
                             <hr>
                             <div class="table-responsive">
-                                <table id="table_non_resep" class="table table-bordered table-hover color-table info-table">
+                                <table id="tb_pelanggan" class="table table-bordered table-hover color-table info-table">
                                     <thead>
                                         <tr>
                                             <th>Nama</th>
@@ -89,3 +89,22 @@
 
     <script src="<?php echo base_url('assets'); ?>/js/cbpFWTabs.js"></script>
 <script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/bower_components/multiselect/js/jquery.multi-select.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		dataTables = $('#tb_pelanggan').DataTable({
+            "columnDefs": [{
+                
+            }],
+             "ajax": {
+                "url": "<?php echo base_url('Pelanggan/ajaxTable');?>",
+                "type": "POST"
+            },
+            "serverSide": true, //Feature control DataTables' server-side processing mode.
+            "processing": true,
+
+            "scrollCollapse": true,
+            
+        });
+	}
+</script>
