@@ -39,7 +39,7 @@
                 
                                 <button class='btn btn-info'  data-toggle="modal" data-target="#modalNonResep" onclick=''><i class='fa fa-plus'></i> Tambah Pelanggan</button>
                                 <!--<button class='btn btn-info'  data-toggle="modal" data-target="#modalDetail"><i class='fa fa-plus'></i> Tambah Pemesanan</button>-->
-                                <button class='btn btn-default' onclick='tb_pelanggan.ajax.reload();'><i class='fa fa-refresh'></i> Reload Table</button>
+                                <button class='btn btn-default' id='bt-pelanggan'><i class='fa fa-refresh'></i> Reload Table</button>
 
                             </center>
                             <hr>
@@ -50,6 +50,7 @@
                                             <th>Nama</th>
                                             <th>Alamat</th>
                                             <th>No. Telpon</th>
+                                            <th>Email</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -57,6 +58,7 @@
                                             <th>Nama</th>
                                             <th>Alamat</th>
                                             <th>No. Telpon</th>
+                                            <th>Email</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -77,7 +79,7 @@
 <?php $this->load->view('template/footer'); ?>
 
 <script src="<?php echo base_url(); ?>assets/plugins/bower_components/datatables/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url('public'); ?>/jquery.form.js"></script>
+
 <script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/jquery-notific8/jquery.notific8.min.js"></script> 
 <script src="<?php echo base_url(); ?>assets/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/bower_components/sweetalert/sweetalert.min.js"></script>
@@ -92,7 +94,7 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		dataTables = $('#tb_pelanggan').DataTable({
+		tb_pelanggan = $('#tb_pelanggan').DataTable({
             "columnDefs": [{
                 
             }],
@@ -106,5 +108,10 @@
             "scrollCollapse": true,
             
         });
-	}
+	});
+
+    $("#bt-pelanggan").click(function(){
+        tb_pelanggan.ajax.reload()
+        // alert("hai");
+    });
 </script>
