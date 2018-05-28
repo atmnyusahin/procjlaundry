@@ -13,12 +13,12 @@
         <div class="row bg-title">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                 <h4 class="page-title">
-                    Pelanggan
+                    Manajemen User
                 </h4>
             </div>
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                 <ol class="breadcrumb">
-                    <li class="active">Pelanggan</li>
+                    <li class="active">Manajemen User</li>
                 </ol>
             </div>
             <!-- /.col-lg-12 -->
@@ -39,32 +39,32 @@
                 
                                 <button class='btn btn-info'  data-toggle="modal" data-target="#modalNonResep" onclick=''><i class='fa fa-plus'></i> Tambah User Baru</button>
                                 <!--<button class='btn btn-info'  data-toggle="modal" data-target="#modalDetail"><i class='fa fa-plus'></i> Tambah Pemesanan</button>-->
-                                <button class='btn btn-default' onclick='tb_pelanggan.ajax.reload();'><i class='fa fa-refresh'></i> Reload Table</button>
+                                <button class='btn btn-default' onclick='tb_users.ajax.reload();'><i class='fa fa-refresh'></i> Reload Table</button>
 
                             </center>
                             <hr>
                             <div class="table-responsive">
-                                <table id="tb_pelanggan" class="table table-bordered table-hover color-table info-table">
+                                <table id="tb_users" class="table table-bordered table-hover color-table info-table">
                                     <thead>
                                         <tr>
-                                            <th>Username</th>
                                             <th>Nama</th>
                                             <th>Alamat</th>
                                             <th>No. Telpon</th>
                                             <th>Keaktifan</th>
                                             <th>Jabatan</th>
-                                            <th>No. Telpon</th>
+                                            <th>Username</th>
+                                            <th>Act</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Username</th>
                                             <th>Nama</th>
                                             <th>Alamat</th>
                                             <th>No. Telpon</th>
                                             <th>Keaktifan</th>
                                             <th>Jabatan</th>
-                                            <th>No. Telpon</th>
+                                            <th>Username</th>
+                                            <th>Act</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -100,12 +100,12 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        dataTables = $('#tb_pelanggan').DataTable({
+        tb_users = $('#tb_users').DataTable({
             "columnDefs": [{
                 
             }],
              "ajax": {
-                "url": "<?php echo base_url('Pelanggan/ajaxTable');?>",
+                "url": "<?php echo base_url('Profiluser/ajaxTable');?>",
                 "type": "POST"
             },
             "serverSide": true, //Feature control DataTables' server-side processing mode.
@@ -114,5 +114,10 @@
             "scrollCollapse": true,
             
         });
-    }
+    });
+
+    $("#bt-users").click(function(){
+        tb_users.ajax.reload()
+        
+    });
 </script>

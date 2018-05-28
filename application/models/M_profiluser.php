@@ -1,16 +1,16 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
     
-class M_pelanggan extends CI_Model {
+class M_profiluser extends CI_Model {
 
 
-	var $table = 'Pelanggan';
-    var $column = array('nama','alamat','nomor_telepon'); 
-    var $order = array('id_pelanggan' => 'desc');
+	var $table = 'users';
+    var $column = array('nama','alamat','no_telpon','keaktifan','jabatan','username'); 
+    var $order = array('id_user' => 'desc');
 
     private function _get_datatables_query()
     {
+        
         $this->db->from($this->table);
-        $this->db->where("is_delete", 0);
 
         $i = 0;
     
@@ -62,7 +62,6 @@ class M_pelanggan extends CI_Model {
     public function count_all()
     {
         $this->db->from($this->table);
-        $this->db->where('is_delete', 0);
         return $this->db->count_all_results();
     }
 
