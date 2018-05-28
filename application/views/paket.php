@@ -44,7 +44,7 @@
                             </center>
                             <hr>
                             <div class="table-responsive">
-                                <table id="" class="table table-bordered table-hover color-table info-table">
+                                <table id="tb_paket" class="table table-bordered table-hover color-table info-table">
                                     <thead>
                                         <tr>
                                             <th>Nama</th>
@@ -91,3 +91,27 @@
 
     <script src="<?php echo base_url('assets'); ?>/js/cbpFWTabs.js"></script>
 <script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/bower_components/multiselect/js/jquery.multi-select.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		tb_paket = $('#tb_paket').DataTable({
+            "columnDefs": [{
+                
+            }],
+             "ajax": {
+                "url": "<?php echo base_url('Paket/ajaxTable');?>",
+                "type": "POST"
+            },
+            "serverSide": true, //Feature control DataTables' server-side processing mode.
+            "processing": true,
+
+            "scrollCollapse": true,
+            
+        });
+	});
+
+    $("#bt-pelanggan").click(function(){
+        tb_paket.ajax.reload()
+        // alert("hai");
+    });
+</script>
