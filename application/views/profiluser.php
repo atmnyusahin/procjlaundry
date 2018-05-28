@@ -30,14 +30,14 @@
                     <div class="sttabs tabs-style-underline">
                         <nav>
                             <ul>
-                                <li><a href="#" class="sticon ti-id-badge active"><span>Manajemen Pelanggan</span></a></li>
+                                <li><a href="#" class="sticon ti-id-badge active"><span>Manajemen Profil User</span></a></li>
                             </ul>
                         </nav>
                         <div class="content-wrap">
                             <hr>
                             <center>
                 
-                                <button class='btn btn-info'  data-toggle="modal" data-target="#modalNonResep" onclick=''><i class='fa fa-plus'></i> Tambah Pelanggan</button>
+                                <button class='btn btn-info'  data-toggle="modal" data-target="#modalNonResep" onclick=''><i class='fa fa-plus'></i> Tambah User Baru</button>
                                 <!--<button class='btn btn-info'  data-toggle="modal" data-target="#modalDetail"><i class='fa fa-plus'></i> Tambah Pemesanan</button>-->
                                 <button class='btn btn-default' onclick='tb_pelanggan.ajax.reload();'><i class='fa fa-refresh'></i> Reload Table</button>
 
@@ -47,15 +47,23 @@
                                 <table id="tb_pelanggan" class="table table-bordered table-hover color-table info-table">
                                     <thead>
                                         <tr>
+                                            <th>Username</th>
                                             <th>Nama</th>
                                             <th>Alamat</th>
+                                            <th>No. Telpon</th>
+                                            <th>Keaktifan</th>
+                                            <th>Jabatan</th>
                                             <th>No. Telpon</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
+                                            <th>Username</th>
                                             <th>Nama</th>
                                             <th>Alamat</th>
+                                            <th>No. Telpon</th>
+                                            <th>Keaktifan</th>
+                                            <th>Jabatan</th>
                                             <th>No. Telpon</th>
                                         </tr>
                                     </tfoot>
