@@ -37,26 +37,22 @@
 	                        <hr>
                             <center>
                 
-                                <button class='btn btn-info'  data-toggle="modal" data-target="#modalNonResep" onclick=''><i class='fa fa-plus'></i> Tambah Satuan Harga</button>
+                            <button class='btn btn-info'  data-toggle="modal" data-target="#modal_satuan" onclick=''><i class='fa fa-plus'></i> Tambah Satuan </button>
                                 <!--<button class='btn btn-info'  data-toggle="modal" data-target="#modalDetail"><i class='fa fa-plus'></i> Tambah Pemesanan</button>-->
-                                <button class='btn btn-default' onclick='table_non_resep.ajax.reload();'><i class='fa fa-refresh'></i> Reload Table</button>
+                                <button class='btn btn-default' id='bt-satuan'><i class='fa fa-refresh'></i> Reload Table</button>
 
                             </center>
                             <hr>
                             <div class="table-responsive">
-                                <table id="table_non_resep" class="table table-bordered table-hover color-table info-table">
+                                <table id="tb_satuan" class="table table-bordered table-hover color-table info-table">
                                     <thead>
-                                        <tr>
-                                            <th>Nama</th>
-                                            <th>Harga</th>
-                                            <th>Satuan</th>
+                                    	<tr>
+                                            <th>Satuan Harga</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Nama</th>
-                                            <th>Harga</th>
-                                            <th>Satuan</th>
+                                            <th>Satuan Harga</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -71,13 +67,21 @@
 	        </div>
 	    </div>
 
-
-	</div> 
+</div> 
+</div>
+<div class="modal fade bd-example-modal-lg" id="modal_satuan" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">Judul</div>
+            <div class="modal-content">Content</div>
+            <div class="modal-footer">footer</div>
+        </div>
+    </div>
 </div>
 <?php $this->load->view('template/footer'); ?>
 
 <script src="<?php echo base_url(); ?>assets/plugins/bower_components/datatables/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url('public'); ?>/jquery.form.js"></script>
+
 <script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/jquery-notific8/jquery.notific8.min.js"></script> 
 <script src="<?php echo base_url(); ?>assets/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/plugins/bower_components/sweetalert/sweetalert.min.js"></script>
@@ -89,3 +93,27 @@
 
     <script src="<?php echo base_url('assets'); ?>/js/cbpFWTabs.js"></script>
 <script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/bower_components/multiselect/js/jquery.multi-select.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		tb_satuan = $('#tb_satuan').DataTable({
+            "columnDefs": [{
+                
+            }],
+             "ajax": {
+                "url": "<?php echo base_url('Manajemen_satuan_harga/ajaxTable');?>",
+                "type": "POST"
+            },
+            "serverSide": true, //Feature control DataTables' server-side processing mode.
+            "processing": true,
+
+            "scrollCollapse": true,
+            
+        });
+	});
+
+    $("#bt-satuan").click(function(){
+        tb_satuan.ajax.reload()
+        
+    });
+</script>
