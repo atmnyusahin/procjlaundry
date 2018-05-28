@@ -21,10 +21,9 @@ class Paket extends US_Controller {
         foreach ($list as $key) {
             $no++;
             $row = array();
-            $row[] = $key->id_satuan;
             $row[] = $key->nama;
             $row[] = $key->harga;
-            $row[] = $key->jangka_waktu;
+            $row[] = $key->jangka_waktu." Hari";
             
             $row[] = '
             <a href="#" data-toggle="tooltip" data-original-title="Edit" onclick="show_edit('.$key->id_paket.')"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>

@@ -37,9 +37,9 @@
 	                        <hr>
                             <center>
                 
-                                <button class='btn btn-info'  data-toggle="modal" data-target="#modalNonResep" onclick=''><i class='fa fa-plus'></i> Tambah Satuan Harga</button>
+                                <button class='btn btn-info'  data-toggle="modal" data-target="#modal_paket" onclick=''><i class='fa fa-plus'></i> Tambah Paket</button>
                                 <!--<button class='btn btn-info'  data-toggle="modal" data-target="#modalDetail"><i class='fa fa-plus'></i> Tambah Pemesanan</button>-->
-                                <button class='btn btn-default' onclick='table_non_resep.ajax.reload();'><i class='fa fa-refresh'></i> Reload Table</button>
+                                <button class='btn btn-default' onclick='bt-paket'><i class='fa fa-refresh'></i> Reload Table</button>
 
                             </center>
                             <hr>
@@ -49,16 +49,16 @@
                                         <tr>
                                             <th>Nama</th>
                                             <th>Harga</th>
-                                            <th>Satuan</th>
                                             <th>Jangka Waktu</th>
+                                            <th>Act</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>Nama</th>
                                             <th>Harga</th>
-                                            <th>Satuan</th>
                                             <th>Jangka Waktu</th>
+                                            <th>Act</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -75,6 +75,30 @@
 
 
 	</div> 
+</div>
+<div id="modal_paket" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Modal Content is Responsive</h4> </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">Recipient:</label>
+                        <input type="text" class="form-control" id="recipient-name"> </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">Message:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger waves-effect waves-light">Save changes</button>
+            </div>
+        </div>
+    </div>
 </div>
 <?php $this->load->view('template/footer'); ?>
 
@@ -110,7 +134,7 @@
         });
 	});
 
-    $("#bt-pelanggan").click(function(){
+    $("#bt-paket").click(function(){
         tb_paket.ajax.reload()
         // alert("hai");
     });

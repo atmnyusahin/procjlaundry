@@ -63,7 +63,7 @@ class M_paket extends CI_Model {
     public function count_all()
     {
         $this->db->from($this->table);
-        $this->db->Where('is_delete', 0);
+        $this->db->where('is_delete', 0);
         return $this->db->count_all_results();
     }
 
