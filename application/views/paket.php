@@ -44,12 +44,13 @@
                             </center>
                             <hr>
                             <div class="table-responsive">
-                                <table id="table_non_resep" class="table table-bordered table-hover color-table info-table">
+                                <table id="" class="table table-bordered table-hover color-table info-table">
                                     <thead>
                                         <tr>
                                             <th>Nama</th>
                                             <th>Harga</th>
                                             <th>Satuan</th>
+                                            <th>Jangka Waktu</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -57,6 +58,7 @@
                                             <th>Nama</th>
                                             <th>Harga</th>
                                             <th>Satuan</th>
+                                            <th>Jangka Waktu</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
