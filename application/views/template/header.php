@@ -174,6 +174,7 @@
                         <div><img src="<?php echo base_url();?>/assets/plugins/images/users/varun.jpg" alt="user-img" class="img-circle"></div> <a href="<?php echo base_url()?>assets/#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $loginsession['nama']; ?><span class="caret"></span></a>
                         <ul class="dropdown-menu animated flipInY">
                             <li><a href="<?php echo base_url(); ?>Profiluser"><i class="ti-user"></i> My Profile</a></li>
+                             <li><a href="<?php echo base_url(); ?>Profiluser"><i class="ti-user"></i> Manajemen Users</a></li>
                             <li><a href="<?php echo base_url()?>assets/#"><i class="ti-wallet"></i> My Balance</a></li>
                             <li><a href="<?php echo base_url()?>assets/#"><i class="ti-email"></i> Inbox</a></li>
                             <li role="separator" class="divider"></li>
