@@ -37,7 +37,7 @@
 	                        <hr>
                             <center>
                 
-                                <button class='btn btn-info'  data-toggle="modal" data-target="#modalNonResep" onclick=''><i class='fa fa-plus'></i> Tambah Pelanggan</button>
+                                <button class='btn btn-info'  data-toggle="modal" data-target="#modal_pelanggan" onclick=''><i class='fa fa-plus'></i> Tambah Pelanggan</button>
                                 <!--<button class='btn btn-info'  data-toggle="modal" data-target="#modalDetail"><i class='fa fa-plus'></i> Tambah Pemesanan</button>-->
                                 <button class='btn btn-default' id='bt-pelanggan'><i class='fa fa-refresh'></i> Reload Table</button>
 
@@ -51,6 +51,7 @@
                                             <th>Alamat</th>
                                             <th>No. Telpon</th>
                                             <th>Email</th>
+                                            <th>Act</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -59,6 +60,7 @@
                                             <th>Alamat</th>
                                             <th>No. Telpon</th>
                                             <th>Email</th>
+                                            <th>Act</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -75,6 +77,15 @@
 
 
 	</div> 
+</div>
+<div class="modal fade bd-example-modal-lg" id="modal_pelanggan" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">Judul</div>
+            <div class="modal-content">Content</div>
+            <div class="modal-footer">footer</div>
+        </div>
+    </div>
 </div>
 <?php $this->load->view('template/footer'); ?>
 
@@ -112,6 +123,6 @@
 
     $("#bt-pelanggan").click(function(){
         tb_pelanggan.ajax.reload()
-        // alert("hai");
+        
     });
 </script>

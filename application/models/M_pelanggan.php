@@ -9,8 +9,8 @@ class M_pelanggan extends CI_Model {
 
     private function _get_datatables_query()
     {
-        
         $this->db->from($this->table);
+        $this->db->where("is_delete", 0);
 
         $i = 0;
     
