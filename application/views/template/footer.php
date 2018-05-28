@@ -31,8 +31,8 @@
     <script type="text/javascript">
     $(document).ready(function() {
         $.toast({
-            heading: 'Welcome to Elite admin',
-            text: 'Use the predefined ones, or specify a custom position object.',
+            heading: 'Selamat datang di project laundry!',
+            text: 'Semoga sistem kami membantu.',
             position: 'top-right',
             loaderBg: '#ff6849',
             icon: 'info',
