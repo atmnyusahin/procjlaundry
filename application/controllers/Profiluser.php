@@ -35,11 +35,11 @@ class Profiluser extends US_Controller {
             $no++;
             $row = array();
             $row[] = $key->nama;
+            $row[] = $key->username;
             $row[] = $key->alamat;
             $row[] = $key->no_telpon;
             $row[] = $key->keaktifan;
             $row[] = $key->jabatan;
-            $row[] = $key->username;
             
             $row[] = '
             <a href="#" data-toggle="tooltip" data-original-title="Edit" onclick="show_edit('.$key->id_user.')"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>

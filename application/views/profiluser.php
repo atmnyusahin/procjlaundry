@@ -48,22 +48,22 @@
                                     <thead>
                                         <tr>
                                             <th>Nama</th>
+                                            <th>Username</th>
                                             <th>Alamat</th>
                                             <th>No. Telpon</th>
                                             <th>Keaktifan</th>
                                             <th>Jabatan</th>
-                                            <th>Username</th>
                                             <th>Act</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>Nama</th>
+                                            <th>Username</th>
                                             <th>Alamat</th>
                                             <th>No. Telpon</th>
                                             <th>Keaktifan</th>
                                             <th>Jabatan</th>
-                                            <th>Username</th>
                                             <th>Act</th>
                                         </tr>
                                     </tfoot>
@@ -85,9 +85,73 @@
 <div class="modal fade bd-example-modal-lg" id="modalmanajemenuser" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header">Judul</div>
-            <div class="modal-content">Content</div>
-            <div class="modal-footer">footer</div>
+            <div class="modal-header">Tambah User Baru</div>
+            <div class="modal-content">
+                <div class="col-md-12" style="padding: 10px;">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-user"></i></div>
+                                <input type="text" id="nama" name="nama" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-user"></i></div>
+                                <input type="text" id="username" name="username" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                        <label for="alamat">Alamat</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-home"></i></div>
+                            <input type="text" id="alamat" name="alamat" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                        <label for="nomortelepon">Nomor Telepon</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-mobile"></i></div>
+                                <input type="text" id="nomortelepon" name="nomortelepon" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                        <label for="jabatan">Jabatan</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-medall"></i></div>
+                                <input type="text" id="jabatan" name="jabatan" class="form-control">
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                        <label for="keaktifan" class="control-label">Keaktifan</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-dashboard"></i></div>
+                                <select id="keaktifan" name="keaktifan" class="form-control">
+                                    <option value="1">Aktif</option>
+                                    <option value="0">Tidak Aktif</option>
+                                </select>
+                            </div>
+                        </div> 
+                    </div>                      
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger btn-md"><a href="<?php echo base_url(); ?>Profiluser"><i class="fa-fa-close"></i> Batal </button>
+                <button class="btn btn-success btn-md"><i class="fa-fa-save"></i> Simpan </button>
+            </div>
+        </div>
         </div>
     </div>
 </div>
