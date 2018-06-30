@@ -37,7 +37,7 @@
                             <hr>
                             <center>
                 
-                                <button class='btn btn-info'  data-toggle="modal" data-target="#modalmanajemenuser" onclick=''><i class='fa fa-plus'></i> Tambah User Baru</button>
+                                <button class='btn btn-info' data-toggle="modal" data-target="#modalmanajemenuser" onclick="btn_tambah()"> <i class='fa fa-plus'></i>Tambah User Baru</button>
                                 <!--<button class='btn btn-info'  data-toggle="modal" data-target="#modalDetail"><i class='fa fa-plus'></i> Tambah Pemesanan</button>-->
                                 <button class='btn btn-default' onclick='tb_users.ajax.reload();'><i class='fa fa-refresh'></i> Reload Table</button>
 
@@ -87,6 +87,7 @@
         <div class="modal-content">
             <div class="modal-header">Tambah User Baru</div>
             <div class="modal-content">
+            <form id="formmanajemenuser" method="POST">
                 <div class="col-md-12" style="padding: 10px;">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -147,9 +148,11 @@
                     </div>                      
                 </div>
             </div>
+            </form>
             <div class="modal-footer">
-                <button class="btn btn-danger btn-md"><a href="<?php echo base_url(); ?>Profiluser"><i class="fa-fa-close"></i> Batal </button>
-                <button class="btn btn-success btn-md"><i class="fa-fa-save"></i> Simpan </button>
+                <button class="btn btn-default btn-md" id="reset_form"><i class='fa fa-refresh'> </i> Refresh Form </button>
+                <button class="btn btn-danger btn-md" data-dismiss="modal"><i class="fa-fa-close"></i> Batal </button>
+                <button class="btn btn-success btn-md" id="btn-simpan"><i class="fa-fa-save"></i> Simpan </button>
             </div>
         </div>
         </div>
@@ -189,8 +192,106 @@
         });
     });
 
+    
+    
     $("#bt-users").click(function(){
         tb_users.ajax.reload()
         
     });
+    function btn_tambah()
+    {
+        $(".modal-header").text("Formulir Tambah User Baru");
+        remover_error();
+    }
+
+    $("#btn-simpan").click(function(){
+        status = validator();
+        if (status == true) {}
+            else{
+                $.toast({
+                    heading: 'Data yang anda masukkan belum lengkap',
+                    text: 'Isilah form yang berwarna merah dengan data yang benar sesuai ketentuan',
+                    position: 'top-right',
+                    loaderBg: '#ef3b3b',
+                    icon: 'error',
+                    hideAfter: 2000,
+                    stack: 6
+                })
+            }
+        
+    });
+
+    $("#reset_form").click(function(){
+        $("#formmanajemenuser")[0].reset();
+        remover_error();
+    });
+
+
+    function validator()
+    {
+        nama = document.getElementById('nama').value;
+        username = document.getElementById('username').value;
+        alamat = document.getElementById('alamat').value;
+        nomortelepon = document.getElementById('nomortelepon').value;
+        jabatan = document.getElementById('jabatan').value;
+
+        status = true;
+
+        if (nama=="") {
+            status = false;
+            $("#nama").parent().parent().addClass("has-error");
+        }
+        else
+        {
+            $("#nama").parent().parent().removeClass("has-error");
+        }
+
+        if (username=="") {
+            status = false;
+            $("#username").parent().parent().addClass("has-error");
+        }
+        else
+        {
+            $("#username").parent().parent().removeClass("has-error");
+        }
+
+        if (alamat=="") {
+            status = false;
+            $("#alamat").parent().parent().addClass("has-error");
+        }
+        else
+        {
+            $("#alamat").parent().parent().removeClass("has-error");
+        }
+
+        if (nomortelepon=="") {
+            status = false;
+            $("#nomortelepon").parent().parent().addClass("has-error");
+        }
+        else
+        {
+            $("#nomortelepon").parent().parent().removeClass("has-error");
+        }
+
+        if (jabatan=="") {
+            status = false;
+            $("#jabatan").parent().parent().addClass("has-error");
+        }
+        else
+        {
+            $("#jabatan").parent().parent().removeClass("has-error");
+        }
+
+        return status;
+    }
+
+    function remover_error()
+    {
+        $("#nama").parent().parent().removeClass("has-error");
+        $("#username").parent().parent().removeClass("has-error");
+        $("#alamat").parent().parent().removeClass("has-error");
+        $("#nomortelepon").parent().parent().removeClass("has-error");
+        $("#jabatan").parent().parent().removeClass("has-error");
+    }
+
 </script>
