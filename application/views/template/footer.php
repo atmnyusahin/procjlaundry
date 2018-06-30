@@ -36,7 +36,7 @@
             position: 'top-right',
             loaderBg: '#ff6849',
             icon: 'info',
-            hideAfter: 3500,
+            hideAfter: 2000,
             stack: 6
         })
     });

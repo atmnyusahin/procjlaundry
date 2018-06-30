@@ -37,8 +37,7 @@
 	                        <hr>
                             <center>
                 
-                                <button class='btn btn-info'  data-toggle="modal" data-target="#modal_pelanggan" onclick=''><i class='fa fa-plus'></i> Tambah Pelanggan</button>
-                                <!--<button class='btn btn-info'  data-toggle="modal" data-target="#modalDetail"><i class='fa fa-plus'></i> Tambah Pemesanan</button>-->
+                                <button class='btn btn-info' data-toggle="modal" data-target="#modal_pelanggan" onclick="bt_tambah()"><i class='fa fa-plus'></i> Tambah Pelanggan</button>
                                 <button class='btn btn-default' id='bt-pelanggan'><i class='fa fa-refresh'></i> Reload Table</button>
 
                             </center>
@@ -82,8 +81,53 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">Judul</div>
-            <div class="modal-content">Content</div>
-            <div class="modal-footer">footer</div>
+            <div class="modal-content">
+                <form id="form_pelanggan" method="POST">
+                    <div class="col-md-12" style="padding: 10px;">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="nama">Nama</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="ti-user"></i></div>
+                                    <input type="text" name="nama" id="nama" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="alamat">Alamat</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="ti-home"></i></div>
+                                    <input type="text" name="alamat" id="alamat" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="no_telp">Nomor telepon</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="ti-mobile"></i></div>
+                                    <input type="text" name="no_telp" id="no_telp" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="ti-email"></i></div>
+                                    <input type="text" name="email" id="email" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default btn-md" id="reset_form"><i class="fa fa-refresh"></i> Refresh form</button>
+                <button class="btn btn-danger btn-md" data-dismiss="modal"><i class="fa fa-close"></i> Batal</button>
+                <button class="btn btn-success btn-md" id="btn-simpan"><i class="fa fa-save"></i> Simpan</button>
+            </div>
         </div>
     </div>
 </div>
@@ -123,6 +167,91 @@
 
     $("#bt-pelanggan").click(function(){
         tb_pelanggan.ajax.reload()
-        
     });
+
+    $("#btn-simpan").click(function(){
+        status = validator();
+        if (status == true) {}
+        else{
+            $.toast({
+                heading: 'Error!',
+                text: 'Kolom berwarna merah wajib diisi.',
+                position: 'top-right',
+                loaderBg: '#ef3b3b',
+                icon: 'error',
+                hideAfter: 2000,
+                stack: 6
+            })
+        }
+    });
+
+    $("#reset_form").click(function(){
+        $("#form_pelanggan")[0].reset();
+        remover_error();
+    });
+
+    function validator()
+    {
+        nama = document.getElementById('nama').value;
+        alamat = document.getElementById('alamat').value;
+        no_telp = document.getElementById('no_telp').value;
+        email = document.getElementById('email').value;
+
+        status = true;
+
+        if (nama=="") {
+            status = false;
+            $("#nama").parent().parent().addClass("has-error");
+        }
+        else
+        {
+            $("#nama").parent().parent().removeClass("has-error");
+        }
+
+        if (alamat=="") {
+            status = false;
+            $("#alamat").parent().parent().addClass("has-error");
+        }
+        else
+        {
+            $("#alamat").parent().parent().removeClass("has-error");
+        }
+
+        if (no_telp=="") {
+            status = false;
+            $("#no_telp").parent().parent().addClass("has-error");
+        }
+        else
+        {
+            $("#no_telp").parent().parent().removeClass("has-error");
+        }
+
+        if (email=="") {
+            status = false;
+            $("#email").parent().parent().addClass("has-error");
+        }
+        else
+        {
+            $("#email").parent().parent().removeClass("has-error");
+        }
+
+        return status;
+    }
+
+
+    function bt_tambah()
+    {
+        $(".modal-header").text("Formulir Tambah Pelanggan");
+        remover_error();
+    }
+
+    function remover_error()
+    {
+        $("#nama").parent().parent().removeClass("has-error");
+        $("#alamat").parent().parent().removeClass("has-error");
+        $("#no_telp").parent().parent().removeClass("has-error");
+        $("#email").parent().parent().removeClass("has-error");
+    }
+
+
 </script>
