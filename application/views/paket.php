@@ -8,7 +8,7 @@
 <link href="<?php echo base_url(); ?>assets/plugins/bower_components/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
 <link href="<?php echo base_url(); ?>assets/plugins/bower_components/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo base_url(); ?>assets/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
-	<div id="page-wrapper">
+<div id="page-wrapper">
 		<div class="container-fluid">
 		<div class="row bg-title">
 	        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -37,7 +37,7 @@
 	                        <hr>
                             <center>
                 
-                                <button class='btn btn-info'  data-toggle="modal" data-target="#modal_paket" onclick=''><i class='fa fa-plus'></i> Tambah Paket</button>
+                                <button class='btn btn-info' id="btn-tambah" data-toggle="modal" data-target="#modal_paket" onclick="bt_tambah()"><i class='fa fa-plus'></i> Tambah Paket</button>
                                 <!--<button class='btn btn-info'  data-toggle="modal" data-target="#modalDetail"><i class='fa fa-plus'></i> Tambah Pemesanan</button>-->
                                 <button class='btn btn-default' onclick='bt-paket'><i class='fa fa-refresh'></i> Reload Table</button>
 
@@ -48,16 +48,20 @@
                                     <thead>
                                         <tr>
                                             <th>Nama</th>
-                                            <th>Harga</th>
+                                            <th>Satuan</th>
                                             <th>Jangka Waktu</th>
+                                            <th>Harga</th>
+                                            <th>Jumlah</th>
                                             <th>Act</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Nama</th>
-                                            <th>Harga</th>
+		                                    <th>Nama</th>
+                                            <th>Satuan</th>
                                             <th>Jangka Waktu</th>
+                                            <th>Harga</th>
+                                            <th>Jumlah</th>
                                             <th>Act</th>
                                         </tr>
                                     </tfoot>
@@ -76,26 +80,69 @@
 
 	</div> 
 </div>
-<div id="modal_paket" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog">
+<div id="modal_paket" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title">Modal Content is Responsive</h4> </div>
+                <h4 class="modal-title">Tambah Data Menu Paket</h4> </div>
             <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="recipient-name" class="control-label">Recipient:</label>
-                        <input type="text" class="form-control" id="recipient-name"> </div>
-                    <div class="form-group">
-                        <label for="message-text" class="control-label">Message:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
-                    </div>
-                </form>
+                <form id="form_paket" method="POST">
+                <div class="col-md-12" style="padding: 10px;">
+                	<div class="col-md-6">
+	                    <div class="form-group">
+	                        <label for="nama-name" class="control-label">Nama Paket:</label>
+	                        <div class="input-group">
+	                        	<div class="input-group-addon"><i class="ti-package"></i></div>
+	                        	<input type="text" class="form-control" id="nama">
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="col-md-6">
+	                    <div class="form-group">
+	                        <label for="satuan-text" class="control-label">Satuan:</label>
+	                        <div class="input-group">
+	                        	<div class="input-group-addon"><i class="ti-filter"></i></div>
+	                        	<select id="satuan" name="keaktifan" class="form-control">
+
+	                        	</select>
+	                        </div>
+	                    </div>
+					</div>
+					<div class="col-md-6">
+	                    <div class="form-group">
+	                        <label for="jangka-text" class="control-label">Jangka Waktu:</label>
+	                        <div class="input-group">
+	                        	<div class="input-group-addon"><i class="ti-time"></i></div>
+	                        	<input type="text" class="form-control" id="jangka">
+	                        </div>
+	                    </div>
+					</div>
+					<div class="col-md-6">
+	                    <div class="form-group">
+	                        <label for="harga-text" class="control-label">Harga:</label>
+	                        <div class="input-group">
+	                        	<div class="input-group-addon"><i class="ti-money"></i></div>
+	                        	<input type="text" class="form-control" id="harga">
+	                        </div>
+	                    </div>
+					</div>
+					<div class="col-md-6">
+	                    <div class="form-group">
+	                        <label for="jumlah-text" class="control-label">Jumlah:</label>
+	                        <div class="input-group">
+	                        	<div class="input-group-addon"><i class="ti-bar-chart"></i></div>
+	                        	<input type="text" class="form-control" id="jumlah">
+	                        </div>
+	                    </div>
+					</div>
+				</div>
+				</form>                
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-danger waves-effect waves-light">Save changes</button>
+                <button type="button" class="btn btn-default waves-effect" id="reset_form">Refresh</button>
+                <button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success waves-effect waves-light" id="btn-simpan">Save changes</button>
             </div>
         </div>
     </div>
@@ -123,7 +170,7 @@
                 
             }],
              "ajax": {
-                "url": "<?php echo base_url('Paket/ajaxTable');?>",
+                "url": "<?php echo base_url('Transaksi/ajaxTable');?>",
                 "type": "POST"
             },
             "serverSide": true, //Feature control DataTables' server-side processing mode.
@@ -134,8 +181,104 @@
         });
 	});
 
-    $("#bt-paket").click(function(){
+    $("#bt-transaksi").click(function(){
         tb_paket.ajax.reload()
         // alert("hai");
     });
+
+    $("#btn-simpan").click(function(){
+        status = validator();
+        if (status == true){}
+        else{
+        	$.toast({
+            heading: 'Error!',
+            text: 'Kolom berwarna merah wajib diisi',
+            position: 'top-right',
+            loaderBg: '#ef3b3b',
+            icon: 'error',
+            hideAfter: 3500,
+            stack: 6
+        })
+        }
+    });
+
+    $("#reset_form").click(function(){
+        $("#form_paket")[0].reset();
+        remover_error();
+    });
+
+    function validator()
+    {
+    	nama = document.getElementById('nama').value;
+    	satuan = document.getElementById('satuan').value;
+    	jangka = document.getElementById('jangka').value;
+    	harga = document.getElementById('harga').value;
+    	jumlah = document.getElementById('jumlah').value;
+
+    	status = true;
+
+    	if (nama==""){
+    		status = false;
+    		$("#nama").parent().parent().addClass("has-error");
+    	}
+    	else
+    	{
+    		$("#nama").parent().parent().removeClass("has-error");
+    	}
+
+    	if (satuan==""){
+    		status = false;
+    		$("#satuan").parent().parent().addClass("has-error");
+    	}
+    	else
+    	{
+    		$("#satuan").parent().parent().removeClass("has-error");
+    	}
+
+    	if (jangka==""){
+    		status = false;
+    		$("#jangka").parent().parent().addClass("has-error");
+    	}
+    	else
+    	{
+    		$("#jangka").parent().parent().removeClass("has-error");
+    	}
+
+    	if (harga==""){
+    		status = false;
+    		$("#harga").parent().parent().addClass("has-error");
+    	}
+    	else
+    	{
+    		$("#harga").parent().parent().removeClass("has-error");
+    	}
+
+    	if (jumlah==""){
+    		status = false;
+    		$("#jumlah").parent().parent().addClass("has-error");
+    	}
+    	else
+    	{
+    		$("#jumlah").parent().parent().removeClass("has-error");
+    	}
+
+    	return status;
+    }
+
+
+    function bt_tambah()
+    {
+    	$("modal-header").text("Tambah Paket");
+    	remover_error();
+    }
+
+    function remover_error()
+    {
+    	$("#nama").parent().parent().removeClass("has-error");
+    	$("#satuan").parent().parent().removeClass("has-error");
+    	$("#jangka").parent().parent().removeClass("has-error");
+    	$("#harga").parent().parent().removeClass("has-error");
+    	$("#jumlah").parent().parent().removeClass("has-error");
+    }
+    
 </script>
