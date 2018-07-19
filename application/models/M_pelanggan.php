@@ -76,4 +76,10 @@ class M_pelanggan extends CI_Model {
         return $query->result();
     }
 
+    function simpan($data)
+    {
+        $this->db->insert($this->table, $data);
+        echo json_encode(array('status'=>true));
+    }
+
 }

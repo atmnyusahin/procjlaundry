@@ -43,4 +43,9 @@ class Pelanggan extends US_Controller {
 
         echo json_encode($output);
 	}
+
+    function simpan()
+    {
+        $this->M_pelanggan->simpan($this->input->post());
+    }
 }

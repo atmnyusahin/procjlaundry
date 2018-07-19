@@ -104,10 +104,10 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="no_telp">Nomor telepon</label>
+                                <label for="no_telpon">Nomor telepon</label>
                                 <div class="input-group">
                                     <div class="input-group-addon"><i class="ti-mobile"></i></div>
-                                    <input type="text" name="no_telp" id="no_telp" class="form-control">
+                                    <input type="text" name="no_telpon" id="no_telpon" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -148,6 +148,9 @@
 <script type="text/javascript" src="<?php echo base_url('assets'); ?>/plugins/bower_components/multiselect/js/jquery.multi-select.js"></script>
 
 <script type="text/javascript">
+
+var method;
+
 	$(document).ready(function() {
 		tb_pelanggan = $('#tb_pelanggan').DataTable({
             "columnDefs": [{
@@ -171,7 +174,46 @@
 
     $("#btn-simpan").click(function(){
         status = validator();
-        if (status == true) {}
+        if (status == "true") {
+
+            var url;
+            if (method=="tambah") {
+                url = "<?php echo base_url();?>Pelanggan/simpan";
+            }
+
+            else {
+                url = "<?php echo base_url();?>Pelanggan/edit/"+id_edit;
+            }
+
+            $.ajax({
+                url : url,
+                type: "POST",
+                data: $('#form_pelanggan').serialize(),
+                dataType: "JSON",
+                success: function(data)
+                {
+                    $.toast({
+                        heading: 'Success!',
+                        text: 'Berhasil disimpan!',
+                        position: 'top-right',
+                        loaderBg: '#ef3b3b',
+                        icon: 'success',
+                        hideAfter: 2000,
+                        stack: 6
+                    });
+                    $("#modal_pelanggan").modal('toggle');
+                    $("#form_pelanggan")[0].reset();
+                    
+                    tb_pelanggan.ajax.reload();
+                    
+                },
+                error: function (jqXHR, textStatus, errorThrown)
+                {
+                    alert('Error adding / update data');
+
+                }
+            });
+        }
         else{
             $.toast({
                 heading: 'Error!',
@@ -181,7 +223,7 @@
                 icon: 'error',
                 hideAfter: 2000,
                 stack: 6
-            })
+            });
         }
     });
 
@@ -197,10 +239,10 @@
         no_telp = document.getElementById('no_telp').value;
         email = document.getElementById('email').value;
 
-        status = true;
+        status = "true";
 
         if (nama=="") {
-            status = false;
+            status = "false";
             $("#nama").parent().parent().addClass("has-error");
         }
         else
@@ -209,7 +251,7 @@
         }
 
         if (alamat=="") {
-            status = false;
+            status = "false";
             $("#alamat").parent().parent().addClass("has-error");
         }
         else
@@ -218,7 +260,7 @@
         }
 
         if (no_telp=="") {
-            status = false;
+            status = "false";
             $("#no_telp").parent().parent().addClass("has-error");
         }
         else
@@ -227,7 +269,7 @@
         }
 
         if (email=="") {
-            status = false;
+            status = "false";
             $("#email").parent().parent().addClass("has-error");
         }
         else
@@ -243,6 +285,7 @@
     {
         $(".modal-header").text("Formulir Tambah Pelanggan");
         remover_error();
+        method = "tambah";
     }
 
     function remover_error()
